@@ -2,7 +2,7 @@
 
 import { useRouter, useParams } from 'next/navigation';
 import Modal from '../../../../components/Modal/Modal';
-import NotePreview from '../../../../components/NotePreview/NotePreview';
+import NotePreviewClient from './NotePreview.client';
 
 export default function InterceptedNotePage() {
   const router = useRouter();
@@ -10,7 +10,7 @@ export default function InterceptedNotePage() {
 
   return (
     <Modal onClose={() => router.back()}>
-      <NotePreview id={id} />
+      <NotePreviewClient id={id} />
     </Modal>
   );
 }
