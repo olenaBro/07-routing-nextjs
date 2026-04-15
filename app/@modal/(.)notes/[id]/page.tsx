@@ -1,8 +1,8 @@
 'use client';
 
 import { useRouter, useParams } from 'next/navigation';
-import Modal from '../../../../../components/Modal/Modal';
-import NotePreview from '../../../../../components/NotePreview/NotePreview';
+import Modal from '../../../../components/Modal/Modal';
+import NotePreview from '../../../../components/NotePreview/NotePreview';
 
 export default function InterceptedNotePage() {
   const router = useRouter();
