@@ -17,6 +17,7 @@ interface FetchNotesParams {
   page?: number;
   perPage?: number;
   search?: string;
+  tag?: string;
 }
 
 interface CreateNoteBody {
@@ -33,6 +34,7 @@ export const fetchNotes = async (
       page: params.page ?? 1,
       perPage: params.perPage ?? 12,
       ...(params.search ? { search: params.search } : {}),
+      ...(params.tag && params.tag !== 'all' ? { tag: params.tag } : {}),
     },
   });
   return response.data;
